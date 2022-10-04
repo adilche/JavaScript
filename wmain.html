@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, rgb(90, 174, 247), rgb(2, 13, 118));
+        }
+        
+        h3{
+        text-align: center;
+        font-size: 50px;;
+        color:aliceblue;
+         }
+
+        .holder {
+    display: flex;
+    justify-content: center;
+}
+.imagem {
+  width: 50%vh;
+  height: 50%vw;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  color: aqua;
+}
+.imagem::after {
+  content: attr(data-title);
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+}
+
+    </style>
+
+</head>
+
+<body>
+   
+    <h3> <p>Meu Primeiro Sistema</p></h3>
+
+    
+    <div class="holder">
+
+        <div class="imagem" data-title="Vini">
+          <img src="vini.jpg" alt="" width=80%>
+          <br>
+        </div>
+      
+        <div class="imagem" data-title="Bigode">
+          <img src="bigode.jpg" alt="" width=80%>
+          <br>
+        </div>
+      
+      </div>
+
+</body>
+</html>

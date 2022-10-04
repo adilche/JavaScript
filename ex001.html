@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Capturar User</title>
+    <Style>
+        body {
+            background-color:rgb(80, 80, 241);
+            color: rgb(204, 247, 234);
+            font: normal 20pt arial;
+        
+        } 
+        h1 {
+            color: yellow;
+        } 
+    </Style>
+</head>
+<body>
+    <h1>Logado</h1>
+    <p>Autenticação feita com Sucesso!</p>
+    <Script>
+        //window.alert('Comentário') 
+        window.alert('Atenção!') 
+        window.confirm('Alerta de entrada?')
+    var Wnome = window.prompt('Qual o seu nome?') //Perguntar o nome
+    var Wnumero = window.prompt('Digite um número!') //Entrar com valor
+
+    if (Wnome.toLowerCase() == "adilson") {
+        window.alert("Seja bem vindo de volta: " + Wnome) // Concatenado + 
+    }
+    else{
+        Wletras = Wnome.length - 1
+        Wnumero = Number(Wnumero)
+        window.alert(`Seja bem vindo: ${Wnome}`) // Place holder ${} + Template String
+        document.write(`Olá, <Strong>${Wnome}</Strong>! Seu nome tem ${Wletras} letras </br> </p>`)
+        document.write(`Olá, ${Wnome}! Seu nome em letra maiuscula é: ${Wnome.toUpperCase()} </br> </p>`)
+        document.write(`Olá, ${Wnome}! Seu nome em letra minúscula é: ${Wnome.toLowerCase()} </br> </p>`)
+        document.write(`O número digitado foi: ${Wnumero} </br> </p>`)
+        document.write(`O número foi trocado ponto por virgula: ${Wnumero.toFixed(2).replace('.',',')} </br> </p>`) //Casas decimais e replace de ponto por virgula
+        document.write(`O número digitado foi: ${Wnumero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} </br> </p>`) // Valor em moeda local do Brasil
+        document.write(`O número digitado foi: ${Wnumero.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} </br> </p>`) // Valor em moeda local do USA
+        document.write(`O número digitado foi: ${Wnumero.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})} </br> </p>`) // Valor em moeda local do EURO
+    }
+
+    </Script>
+</body>
+</html>
